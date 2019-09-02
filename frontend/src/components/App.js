@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Switch } from 'react-router-dom';
 
 import history from '../history';
-// import Header from './layout/Header';
+import Header from './layout/Header';
 import Dashboard from './todos/Dashboard';
-// import TodoDelete from './todos/TodoDelete';
+import TodoDelete from './todos/TodoDelete';
 // import TodoEdit from './todos/TodoEdit';
 
 import { Provider } from 'react-redux';
@@ -16,11 +16,11 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router history={history}>
-          {/* <Header /> */}
+          <Header />
           <Switch>
             <Route exact path='/' component={Dashboard} />
-            {/* <Route exact path='/delete/:id' component={TodoDelete} />
-            <Route exact path='/edit/:id' component={TodoEdit} /> */}
+            <Route exact path='/delete/:id' component={TodoDelete} />
+            {/* <Route exact path='/edit/:id' component={TodoEdit} /> */}
           </Switch>
         </Router>
       </Provider>
